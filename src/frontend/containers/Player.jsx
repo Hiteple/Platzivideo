@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getVideoSource } from '../actions';
-import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getVideoSource } from '../actions';
 import '../assets/styles/components/Player.scss';
 
 const Player = props => {
@@ -19,11 +19,12 @@ const Player = props => {
 		<h1>Loading...</h1>
 	) : hasPlaying ? (
 		<div className='player'>
-			<video controls autoplay>
+			<video controls autoPlay>
 				<source src={props.playing.source} type='video/mp4' />
 			</video>
 			<div className='player__back'>
 				<button
+					type='button'
 					className='player__back--btn'
 					onClick={() => props.history.goBack()}
 				>

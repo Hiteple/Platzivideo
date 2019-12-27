@@ -27,7 +27,7 @@ const Login = props => {
 	return (
 		<section className='login'>
 			<div className='login__container'>
-				<h2 tabIndex='0'>Hello there :)</h2>
+				<h2>Hello there :)</h2>
 				<form className='login__container--form' onSubmit={handleSubmit}>
 					<input
 						name='email'
@@ -56,7 +56,7 @@ const Login = props => {
 							value='checkbox'
 						/>
 						Remember me
-						<a href='#'>Forgot your password?</a>
+						<a href='/'>Forgot your password?</a>
 					</div>
 				</form>
 				<div className='login__container--social-media'>
@@ -70,7 +70,8 @@ const Login = props => {
 					</div>
 				</div>
 				<p className='login__container--register'>
-					Don't have an account yet? <Link to='/register'>Signup</Link>
+					Don't have an account yet?
+					<Link to='/register'>Signup</Link>
 				</p>
 			</div>
 		</section>

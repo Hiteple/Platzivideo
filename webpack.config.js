@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/frontend/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
@@ -14,6 +14,14 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				enforce: 'pre',
+				use: {
+					loader: 'eslint-loader'
+				}
+			},
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
