@@ -1,0 +1,116 @@
+.login {
+	background: linear-gradient(#21c08d, #ab88ff);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 30px;
+	min-height: calc(100vh - 200px);
+	&__container {
+		background-color: rgba(255, 255, 255, 0.1);
+		border: 2px solid #fff;
+		border-radius: 40px;
+		color: #fff;
+		padding: 60px 68px 40px;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		&--form {
+			display: flex;
+			flex-direction: column;
+		}
+		&--form label {
+			font-size: 14px;
+		}
+	}
+	&__container--remember {
+		color: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 10px;
+	}
+	&__container--remember input {
+		margin-top: 20px;
+	}
+	&__container--remember a {
+		color: #fff;
+		font-size: 14px;
+		text-decoration: none;
+		margin-left: 20px;
+	}
+	&__container--remember a:hover {
+		text-decoration: underline;
+	}
+
+	&__container--social-media > div {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	&__container--social-media > div > img {
+		width: 30px;
+		margin-right: 10px;
+	}
+
+	&__container--register {
+		font-size: 14px;
+	}
+
+	&__container--register a {
+		font-size: 16px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		margin-left: 20px;
+	}
+	&__container--register a:hover {
+		text-decoration: underline;
+	}
+}
+
+.email,
+.password {
+	color: #fff;
+	font-size: 16px;
+}
+
+input {
+	background-color: transparent;
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 2px solid #fff;
+	margin-bottom: 20px;
+	padding: 0 20px;
+	outline: none;
+	height: 50px;
+}
+
+input::placeholder {
+	color: #fff;
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
+}
+
+.submit-btn {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+	border-radius: 25px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Muli', sans-serif;
+	height: 50px;
+	letter-spacing: 1px;
+	margin: 20px 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+	background-color: #fff;
+	color: #21c08d;
+}
